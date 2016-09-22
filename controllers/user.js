@@ -1,18 +1,23 @@
 var User = require('../proxy/user');
 
-exports.save = function(req,res,next){
-	var name = req.body.name;
-	var pass = req.body.pass;
-	var email = req.body.email;
-	User.new(name,pass,email,function(err){
-		if(err){
-			console.log('Fail to save user info...');
-			res.send('Fail to save user info...')
-			return next(err);
-		}
-		console.log('Saving user info successful!');
 
+exports.save = function (req,res){
+	var name = req.body.name;	
+	var password = req.body.password;
+	var email = req.body.email;	
+
+	User.queryUserByEmail(email,function(err,user){
+		if(err) return next(err);
+		if(user){
+			res.send('This email is invalid!');return;
+		}
 	});
-	
-	res.redirect('/signin');
+
+	User.saveNewUser(name,password,email,function(err,next){
+		if(err) return next(err);
+	});	
+};
+
+exports.login = function(req,res){
+
 };

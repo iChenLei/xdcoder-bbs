@@ -5,7 +5,9 @@ mongoose.connect('mongodb://localhost/xdcoder');
 // url:'mongodb://localhost/xdcoder'
 
 require('./user');
-require('./post');
+require('./topic');
+require('./reply');
 
 exports.User = mongoose.model('User');	
-exports.Post = mongoose.model('Post');
+exports.Topic = mongoose.model('Topic');
+exports.Reply = mongoose.model('Reply');

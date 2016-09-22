@@ -1,12 +1,40 @@
+#header{
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.26);
+	background-color: #1976D2;
+	position: fixed;
+	right: 0;
+	left: 0;
+}
 
-*{padding:0;margin:0;}
-body{width:600px;margin:2em auto;padding:0 2em;font-size:14px;font-family:"Microsoft YaHei";}
-p{line-height:24px;margin:1em 0;}
-header{padding:.5em 0;border-bottom:1px solid #cccccc;}
-nav{float:left;font-family:"Microsoft YaHei";font-size:1.1em;text-transform:uppercase;margin-left:-12em;width:9em;text-align:right;}
-nav a{display:block;text-decoration:none;padding:.7em 1em;color:#000000;}
-nav a:hover{background-color:#ff0000;color:#f9f9f9;-webkit-transition:color .2s linear;}
-article{font-size:16px;padding-top:.5em;}
-article a{color:#dd0000;text-decoration:none;}
-article a:hover{color:#333333;text-decoration:underline;}
-.info{font-size:14px;}
+a.appbar-brand{
+	color: #fff;
+	font-size: 20px;
+	padding-right: 5px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+a:hover{
+	background-color: #55ADFD;
+}
+
+
+
+body{
+	background-color: #D7D4D2;
+	font-family: "Helvetica Neue", "Luxi Sans", "DejaVu Sans", Tahoma, "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
+}
+
+div.footer{
+	text-align: center;
+	width: 100%;
+}
+
+div.sep74{
+	width:100%;
+	height: 74px;
+}
+
+button.sign{
+	float: right;
+}

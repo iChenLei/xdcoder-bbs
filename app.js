@@ -20,7 +20,11 @@ var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
+// app.set('view engine', 'ejs');
+
+app.set('view engine', 'html');
+app.engine('html', require('ejs-mate'));
+app.locals._layoutFile = 'layout.html';
 
 
 app.use(favicon());
@@ -40,7 +44,6 @@ app.use(session({
     })
 }));
 
-app.use(csrf());
 app.use(function (req, res, next) {
   res.locals.csrf = req.csrfToken ? req.csrfToken() : '';
   next();
