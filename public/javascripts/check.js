@@ -1,8 +1,16 @@
 $(document).ready(function(){
-	$("button").click(function(){
-		// console.log($("#email").val());
+	$("#email").change(function(){
 		var email = $("#email").val();
-		console.log(email);
-		console.log('What happened?');
+
+		var Reg = /^(\w)+(\.\w+)*@(\w)+((\.\w+)+)$/;
+		var isEmail = Reg.test(email);
+
+		if(isEmail){
+			$("p.showerror").html("");
+			$("button.sign").removeAttr("disabled");
+		}else{
+			$("p.showerror").html("Email is illegal..").css("color","red");
+			$("button.sign").attr("disabled","disabled");
+		}
 	});
 });

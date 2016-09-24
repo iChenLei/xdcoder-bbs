@@ -10,6 +10,7 @@ a.appbar-brand{
 	color: #fff;
 	font-size: 20px;
 	padding-right: 5px;
+	padding-left: 5px;
 	padding-top: 20px;
 	padding-bottom: 20px;
 }
@@ -37,4 +38,11 @@ div.sep74{
 
 button.sign{
 	float: right;
+}
+
+
+@media screen and (max-width: 400px){
+	a.appbar-brand{
+		font-size: 15px;
+	}
 }
