@@ -8,8 +8,4 @@ router.get('/',function (req,res){
 	res.render('sign');
 });
 
-router.get('/home',function(req,res){
-	res.send('Just for a commit...');
-});
-
 module.exports = router;
